@@ -3,9 +3,13 @@
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 10.0.0-rc.5.
 
 ## Development server
-Run `npm run json:server --watch db.json` on one command prompt/terminal for a running Json server,It will get all pizzas data as well as status etc... Navigate to `http://localhost:3000`.
+### You Must run the below three commands
+1. `npm install` or `npm i`
+2. `npm run json:server --watch db.json`
+3. `ng serve`
+4. Above commands 2 and 3 are run parallel in two treminals/command prompts
 
-Run `ng serve` in another command prompt/terminal for a dev server without stopping first command (Json server). Navigate to `http://localhost:4200/`. The app will automatically reload if you change any of the source files.
+### Command 2 will run json server for json data and 3 must run project that's why both commands are run parallel in two terminals/command prompts
 
 ## Code scaffolding
 
