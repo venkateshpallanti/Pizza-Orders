@@ -1,0 +1,178 @@
+{
+    "pizzaOrders": [{
+            "id": 1,
+            "customerName": "Venkatesh",
+            "noOfItemsOrdered": "5",
+            "deliveryAddr": "Beside aayush hospital,currency nagar,vijayawada-52001",
+            "items": [{
+                    "name": "Pizza 1",
+                    "price": "10"
+                },
+                {
+                    "name": "Pizza 1",
+                    "price": "10"
+                },
+                {
+                    "name": "Pizza 1",
+                    "price": "10"
+                }, {
+                    "name": "Pizza 1",
+                    "price": "10"
+                }, {
+                    "name": "Pizza 1",
+                    "price": "10"
+                }
+            ],
+            "totalAmountOfOrder": "50",
+            "orderStatus": "Received",
+            "pizza": "https://img.icons8.com/doodle/96/000000/pizza--v1.png",
+            "name": "My Pizza Sore"
+        },
+        {
+            "id": 2,
+            "customerName": "John",
+            "noOfItemsOrdered": "3",
+            "deliveryAddr": "Beside aayush hospital,currency nagar,vijayawada-52001",
+            "items": [{
+                    "name": "Pizza 1",
+                    "price": "30"
+                },
+                {
+                    "name": "Pizza 1",
+                    "price": "10"
+                }
+
+            ],
+            "totalAmountOfOrder": "40",
+            "orderStatus": "Received",
+            "pizza": "https://img.icons8.com/doodle/96/000000/pizza--v1.png",
+            "name": "My Pizza Sore"
+        },
+        {
+            "id": 3,
+            "customerName": "Spider man",
+            "noOfItemsOrdered": "6",
+            "deliveryAddr": "Beside aayush hospital,currency nagar,vijayawada-52001",
+            "items": [{
+                    "name": "Pizza 1",
+                    "price": "10"
+                },
+                {
+                    "name": "Pizza 1",
+                    "price": "10"
+                },
+                {
+                    "name": "Pizza 1",
+                    "price": "10"
+                }, {
+                    "name": "Pizza 1",
+                    "price": "10"
+                }, {
+                    "name": "Pizza 1",
+                    "price": "10"
+                },
+                {
+                    "name": "Pizza 1",
+                    "price": "10"
+                }
+            ],
+            "totalAmountOfOrder": "60",
+            "orderStatus": "Preparing",
+            "pizza": "https://img.icons8.com/doodle/96/000000/pizza--v1.png",
+            "name": "My Pizza Sore"
+        },
+        {
+            "id": 4,
+            "customerName": "Leo",
+            "noOfItemsOrdered": "4",
+            "deliveryAddr": "Beside aayush hospital,currency nagar,vijayawada-52001",
+            "items": [{
+                    "name": "Pizza 1",
+                    "price": "30"
+                },
+                {
+                    "name": "Pizza 1",
+                    "price": "100"
+                },
+                {
+                    "name": "Pizza 1",
+                    "price": "10"
+                }, {
+                    "name": "Pizza 1",
+                    "price": "10"
+                }
+            ],
+            "totalAmountOfOrder": "160",
+            "orderStatus": "Preparing",
+            "pizza": "https://img.icons8.com/doodle/96/000000/pizza--v1.png",
+            "name": "My Pizza Sore"
+        },
+        {
+            "id": 5,
+            "customerName": "Deo",
+            "noOfItemsOrdered": "7",
+            "deliveryAddr": "Beside aayush hospital,currency nagar,vijayawada-52001",
+            "items": [{
+                    "name": "Pizza 1",
+                    "price": "10"
+                },
+                {
+                    "name": "Pizza 1",
+                    "price": "100"
+                },
+                {
+                    "name": "Pizza 1",
+                    "price": "10"
+                }, {
+                    "name": "Pizza 1",
+                    "price": "10"
+                }, {
+                    "name": "Pizza 1",
+                    "price": "10"
+                },
+                {
+                    "name": "Pizza 1",
+                    "price": "100"
+                },
+                {
+                    "name": "Pizza 1",
+                    "price": "10"
+                }
+            ],
+            "totalAmountOfOrder": "250",
+            "orderStatus": "Preparing",
+            "pizza": "https://img.icons8.com/doodle/96/000000/pizza--v1.png",
+            "name": "My Pizza Sore"
+        },
+        {
+            "id": 6,
+            "customerName": "Trool",
+            "noOfItemsOrdered": "1",
+            "deliveryAddr": "Beside aayush hospital,currency nagar,vijayawada-52001",
+            "items": [{
+                "name": "Pizza 1",
+                "price": "10"
+            }],
+            "totalAmountOfOrder": "10",
+            "orderStatus": "Preparing",
+            "pizza": "https://img.icons8.com/doodle/96/000000/pizza--v1.png",
+            "name": "My Pizza Sore"
+        }
+    ],
+    "status": [{
+            "id": 1,
+            "title": "Order Received",
+            "icon": "https://img.icons8.com/color/48/000000/pizza-delivery.png"
+        },
+        {
+            "id": 2,
+            "title": "Preparing",
+            "icon": "https://img.icons8.com/doodle/48/000000/soup-plate.png"
+        },
+        {
+            "id": 3,
+            "title": "Ready to serve",
+            "icon": "https://img.icons8.com/doodle/48/000000/dining-room.png"
+        }
+    ]
+}

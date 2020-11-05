@@ -1,0 +1,107 @@
+<div class="content" role="main">
+    <!-- Highlight Card --->
+    <div class="card highlight-card card-small">
+        <img src="https://img.icons8.com/doodle/96/000000/pizza--v1.png" />
+        <span>{{ title }} app is running!</span>
+
+    </div>
+    <!-- Resources -->
+    <div class="terminal">
+        <pre>Step:0 Run "npm i"</pre>
+        <pre>Step:1 Run "npm run json:server --watch db.json" in one terminal/command prompt for getting Json Data for Pizzas</pre>
+        <pre>Step:2 Then run "ng serve" in other terminal/command prompt</pre>
+    </div>
+    <br/>
+    <mat-accordion style="width: 100%;">
+        <mat-expansion-panel disabled>
+            <mat-expansion-panel-header>
+                <mat-panel-title class="dimension"> <img src="https://img.icons8.com/dusk/20/000000/npc-face.png" />&nbsp;Customer Name </mat-panel-title>
+                <mat-panel-title class="dimension"> <img src="https://img.icons8.com/officel/20/000000/lift-cart-here.png" />&nbsp;No. of Items ordered </mat-panel-title>
+                <mat-panel-title class="dimension"> <img src="https://img.icons8.com/dusk/20/000000/money-bag-euro.png" />&nbsp; Total Amount of the Order </mat-panel-title>
+                <mat-panel-title class="dimension"> <img src="https://img.icons8.com/officel/20/000000/hashtag-large.png" />&nbsp;Status of the Order </mat-panel-title>
+                <mat-panel-title class="dimension"> <img src="https://img.icons8.com/emoji/20/000000/hourglass-not-done.png" />&nbsp;Change Status </mat-panel-title>
+            </mat-expansion-panel-header>
+        </mat-expansion-panel>
+        <mat-expansion-panel [expanded]="indexExpanded == i" *ngFor="let item of pizzaData let i = index" (click)="pizzaDetails(item,i)">
+            <mat-expansion-panel-header>
+                <mat-panel-title class="dimension"> {{item.customerName}} </mat-panel-title>
+                <mat-panel-title class="dimension"> {{item.noOfItemsOrdered}} </mat-panel-title>
+                <mat-panel-title class="dimension"> ₹&nbsp;{{item.totalAmountOfOrder | number:'2.2-5'}} </mat-panel-title>
+                <mat-panel-title class="dimension"> {{item.orderStatus}} </mat-panel-title>
+                <mat-panel-title>
+                    <button mat-icon-button [matMenuTriggerFor]="menu" aria-label="Example icon-button with a menu" (click)="$event.stopPropagation()">
+						<mat-icon>more_vert</mat-icon>
+					</button>
+                    <mat-menu #menu="matMenu">
+                        <button mat-menu-item *ngFor="let item of pizzaStatus">
+							<div (click)="selectStatus(item,i)">
+								<mat-icon><img src="{{item.icon}}" class="iconDim" /></mat-icon> <span>{{item.title}}</span> </div>
+						</button>
+                    </mat-menu>
+                </mat-panel-title>
+            </mat-expansion-panel-header>
+            <!-- <p>{{pizzaDetail.customerName}}</p> -->
+            <mat-grid-list cols="4" rowHeight="120px">
+                <mat-grid-tile colspan="1" rowspan="4" style="background-color: aqua;">
+                    <mat-card class="example-card">
+                        <mat-card-header>
+                            <div mat-card-avatar class="example-header-image"></div>
+                            <mat-card-title>{{pizzaDetail.name}}</mat-card-title>
+                            <mat-card-subtitle>eat well</mat-card-subtitle>
+                        </mat-card-header>
+                        <center><img mat-card-image src="{{pizzaDetail.pizza}}" alt="Photo of a Shiba Inu" style="width:180px"></center>
+                        <mat-card-content>
+                            <p> Pizza is a savory dish of Italian origin consisting of a usually round, flattened base of leavened wheat-based dough topped with tomatoes, cheese, and often various other ingredients, which is then baked at a high temperature,
+                                traditionally in a wood-fired oven. A small pizza is sometimes called a pizzetta. </p>
+                        </mat-card-content>
+                        <mat-card-actions> &nbsp; </mat-card-actions>
+                    </mat-card>
+                </mat-grid-tile>
+                <mat-grid-tile colspan="3" rowspan="4">
+                    <table width="70%" valign="top">
+                        <tr>
+                            <td width="100%">
+                                <table>
+                                    <tr>
+                                        <td><b>Customer Name:</b></td>
+                                        <td>{{pizzaDetail.customerName}}</td>
+                                    </tr>
+                                    <tr>
+                                        <td><b>Delivery Addresses:</b></td>
+                                        <td>
+                                            <p style="word-wrap: break-word;">{{pizzaDetail.deliveryAddr}}</p>
+                                        </td>
+                                    </tr>
+                                </table>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <table width="70%">
+                                    <tr>
+                                        <td></td>
+                                        <td><b>Item Name</b></td>
+                                        <td><b>Price</b></td>
+                                    </tr>
+                                    <tr *ngFor="let item of pizzaDetail.items let j = index">
+                                        <td>{{j+1}}</td>
+                                        <td>{{item.name}}</td>
+                                        <td>₹&nbsp;{{item.price | number:'2.2-5'}}</td>
+                                    </tr>
+                                    <tr>
+                                        <td colspan="3">
+                                            <hr style="line-height: 4px" /> </td>
+                                    </tr>
+                                    <tr>
+                                        <td colspan="2"> <b>Total Price</b> </td>
+                                        <td> <b>₹&nbsp;{{pizzaDetail.totalAmountOfOrder| number:'2.2-5'}}</b> </td>
+                                    </tr>
+                                </table>
+                            </td>
+                        </tr>
+                    </table>
+                </mat-grid-tile>
+            </mat-grid-list>
+        </mat-expansion-panel>
+    </mat-accordion>
+    <router-outlet></router-outlet>
